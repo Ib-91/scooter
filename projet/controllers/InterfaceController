@@ -1,0 +1,26 @@
+package controllers;
+import views.GestionFrame;
+import views.ClientFrame;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class InterfaceController {
+
+    public static void initListeners(JFrame mainFrame, JButton gestionButton, JButton clientButton) {
+        gestionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Gestionview();  // Fenêtre de gestion
+            }
+        });
+
+        clientButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Clientview();  // Fenêtre côté client
+            }
+        });
+    }
+}
